@@ -1,5 +1,6 @@
 //Imports
-import * as dotenv from "dotenv";
+const dotenv = require("dotenv");
+
 import express, { Application, NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
@@ -12,8 +13,7 @@ import cors from "cors";
 import { default as AuthRoutes } from "./routes/auth.routes";
 import { default as RoleRoutes } from "./routes/role.routes";
 import { default as UserRoutes } from "./routes/user.routes";
-//import bodyParser from 'body-parser';
-//dotenv setup
+
 const env = process.env.NODE_ENV || "development";
 if (env === "development") {
   dotenv.config({ path: __dirname + "/.env" });
