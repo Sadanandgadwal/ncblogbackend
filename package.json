@@ -44,6 +44,7 @@
   "name": "nodets",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module", 
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts",
